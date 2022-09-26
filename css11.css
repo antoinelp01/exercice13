@@ -1,0 +1,138 @@
+html, body{
+
+    height: 100%;
+
+    width: 100%;
+
+    margin: 0;
+
+}
+
+.gridcontainer{
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: grid;
+
+grid-template-rows: 10% 15% 30% 15% 30%;
+grid-template-columns:  100%;
+
+grid-template-areas:
+
+"liens "
+"texte1 "
+" banniere1 "
+"texte2 "
+" banniere2 "
+
+}
+
+.texte1{
+grid-area: texte1;
+text-align: center;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 3em;
+background-color: grey;
+display: flex;
+justify-content: center;
+align-items: center;   
+text-shadow: 2px 2px white;
+
+}
+
+.texte2{
+    grid-area: texte2;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: grey;
+    text-shadow: 2px 2px white;
+
+}
+
+@font-face {
+    font-family: "Allo";
+    src: url("police/Eating-You-Alive.ttf");
+}
+
+@font-face {
+    font-family: "demon";
+    src: url("police/18627.ttf");
+}
+
+
+
+.banniere1{
+    grid-area: banniere1;
+    text-align: center;
+    font-size: 10em;
+font-family: "Allo";
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ban1;
+animation: ban1 10s infinite alternate;
+text-shadow: 2px 2px grey;
+
+}
+
+@keyframes ban1{
+    0% {background-color: blue;}
+    25%{background-color: blueviolet;}
+    50%{background-color: violet;}
+    75%{background-color: orange;}
+  100% {background-color: yellow;}
+
+
+
+}
+.banniere2{
+    grid-area: banniere2;
+    text-align: center;
+    font-size: 8em;
+    background: linear-gradient(black, white, grey);
+    font-family: "demon";
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    transition: transform 1s ease-out;
+    display: inline-flexbox;
+    text-shadow: 20px 20px grey;
+    box-shadow: 4px 4px 4px black;
+    
+
+}
+.banniere2:hover{
+    transform: translate(0, -20px);
+}
+
+ 
+
+.liens:hover{
+  transform: translate(0, 20px);
+}
+   
+.liens{
+    transition: transform 2s ease-out;
+    display: inline-flexbox;
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+     
+
+
+
+
