@@ -11,7 +11,7 @@ html, body{
 .gridcontainer{
     height: 100%;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(56, 55, 55);
     display: grid;
 
 grid-template-rows: 10% 15% 30% 15% 30%;
@@ -19,11 +19,11 @@ grid-template-columns:  100%;
 
 grid-template-areas:
 
-"liens "
-"texte1 "
-" banniere1 "
-"texte2 "
-" banniere2 "
+"liens"
+"texte1"
+"banniere1"
+"texte2"
+"banniere2"
 
 }
 
@@ -93,15 +93,22 @@ text-shadow: 2px 2px grey;
     grid-area: banniere2;
     text-align: center;
     font-size: 8em;
-    background: linear-gradient(black, white, grey);
+    color: pink;
+    background: rgb(228, 65, 65);
+  background: radial-gradient(
+    circle,
+    rgba(228, 65, 65, 1) 0%,
+    rgba(201, 138, 70, 1) 50%,
+    rgba(227, 255, 0, 1) 100%
+  );
     font-family: "demon";
     display: flex;
     justify-content: center;
     align-items: center;  
     transition: transform 1s ease-out;
     display: inline-flexbox;
-    text-shadow: 20px 20px grey;
-    box-shadow: 4px 4px 4px black;
+    text-shadow: 10px 10px rgb(184, 54, 101);
+    box-shadow: 4px 4px 2px black;
     
 
 }
@@ -111,15 +118,46 @@ text-shadow: 2px 2px grey;
 
  
 
-.liens:hover{
-  transform: translate(0, 20px);
-}
-   
-.liens{
-    transition: transform 2s ease-out;
-    display: inline-flexbox;
-}
-
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 100%;
+  }
+  
+  #nav li {
+    float: left;
+    height: 100%;
+  }
+  
+  a {
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 100%;  
+  }
+  a {
+    display: block;
+    padding: 10px;
+    background-color: lightgray;
+    height: 100%;
+    }
+  
+    a:hover {
+    background-color: #111;
+    height: 100%;
+  } 
+  #animate {
+    transition: transform 0.3s ease-out;
+    display: inline-block;
+  }
+  #animate:hover {
+    transform: translate(0, -10px);
+  }
 
 
     
